@@ -1,0 +1,255 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  color: #f0f0f0;
+  background-color: #0a0a0a;
+}
+
+body {
+  background: url('../img/fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  line-height: 1.6;
+  padding-top: 0;
+}
+
+/* NAV - MENÚ SUPERIOR TRANSPARENTE */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  backdrop-filter: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 30px;
+  z-index: 2000;
+}
+
+.main-nav .logo {
+  display: none;
+}
+
+.main-nav .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.main-nav .nav-links li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.main-nav .nav-links li a:hover {
+  color: #ffffff;
+}
+
+/* OCULTAR BOTÓN DE TEMA */
+.theme-toggle {
+  display: none;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: transparent;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 200px;
+    display: none;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+/* BANNER */
+#banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: url('../img/banner.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.animated-line {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff0055, #00c3ff, #ffcc00, #ff0055);
+  background-size: 600% 100%;
+  animation: moveGradient 8s linear infinite;
+  border-radius: 2px;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* MAIN */
+main {
+  display: flex;
+  justify-content: flex-end;
+  padding: 200px 20px 40px;
+}
+
+.presentacion {
+  background-color: transparent;
+  padding: 40px;
+  max-width: 800px;
+  border-radius: 0;
+  margin-right: 5%;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.presentacion h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #ff0066;
+}
+
+.presentacion span {
+  display: block;
+}
+
+.presentacion p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+  color: #f0f0f0;
+}
+
+.presentacion a {
+  color: #00bfff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.presentacion a:hover {
+  color: #ff4081;
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 60px;
+}
+
+footer nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+footer nav a:hover {
+  color: white;
+}
+
+/* RESPONSIVE AJUSTES */
+@media (max-width: 768px) {
+  body {
+    padding-top: 0;
+  }
+
+  #banner {
+    height: 100px;
+  }
+
+  main {
+    justify-content: center;
+    padding-top: 160px;
+  }
+
+  .presentacion {
+    margin-right: 0;
+    padding: 30px 20px;
+  }
+
+  .presentacion h1 {
+    font-size: 1.8rem;
+  }
+
+  .presentacion p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 140px;
+  }
+
+  #banner {
+    height: 80px;
+  }
+
+  .presentacion h1 {
+    font-size: 1.5rem;
+  }
+
+  .presentacion p {
+    font-size: 0.9rem;
+  }
+}
