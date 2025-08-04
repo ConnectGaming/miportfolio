@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoutt – Freelance Video Editor</title>
+  <meta name="description" content="Zoutt es un editor de video freelance especializado en edición creativa, diseño visual e inteligencia artificial." />
+  <meta name="author" content="Zoutt Design" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Zoutt – Freelance Video Editor" />
+  <meta property="og:description" content="Edición de video, diseño e inteligencia artificial." />
+  <meta property="og:image" content="https://tuweb.com/meta/og-image.jpg" />
+  <meta property="og:url" content="https://tuweb.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Zoutt – Freelance Video Editor" />
+  <meta name="twitter:description" content="Edición creativa, diseño visual e IA." />
+  <meta name="twitter:image" content="https://tuweb.com/meta/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="meta/favicon.ico" type="image/x-icon" />
+
+  <!-- Preloads -->
+  <link rel="preload" as="style" href="assets/css/intro.css" />
+  <link rel="preload" as="video" href="assets/video/intro.mp4" type="video/mp4" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/intro.css" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Pantalla de inicio -->
+  <section class="intro-hero hidden">
+    <video autoplay muted loop playsinline class="intro-video">
+      <source src="assets/video/intro.mp4" type="video/mp4" />
+      Tu navegador no soporta el video HTML5.
+    </video>
+
+    <!-- Capa oscura sobre el video -->
+    <div class="overlay"></div>
+
+    <!-- Franja superior con imagen de fondo -->
+    <div class="black-banner">
+      <h1>FREELANCE VIDEO EDITOR</h1>
+      <a href="home.html" class="explore-btn" aria-label="Ir al sitio principal">Explorar</a>
+    </div>
+
+    <!-- Franja negra inferior estilo cinematográfico -->
+    <div class="black-bottom-bar"></div>
+  </section>
+  
+  <!-- Pie de página estilo cinematográfico -->
+<footer class="site-footer">
+  <div class="divider"></div>
+  <p>© 2025 Zoutt video editor. Todos los derechos reservados</p>
+  <nav>
+    <a href="#">Política de privacidad</a> |
+    <a href="#">Contacto</a>
+  </nav>
+</footer>
+
+  <script src="assets/js/intro.js"></script>
+</body>
+</html>

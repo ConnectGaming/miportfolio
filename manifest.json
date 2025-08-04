@@ -1,0 +1,17 @@
+{
+  "name": "Zoutt - Portfolio",
+  "short_name": "Zoutt",
+  "description": "Sitio web profesional de Zoutt, editor de video freelance.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#ff0055",
+  "icons": [
+    {
+      "src": "assets/img/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "lang": "es"
+}

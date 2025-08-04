@@ -1,0 +1,12 @@
+# Redireccionar automáticamente de HTTP a HTTPS
+http://*   https://:splat   301!
+
+# Eliminar .html de las URLs
+# Esto permite que /index.html se muestre como /
+/index.html     /     301
+/:page.html     /:page     301
+
+# Redirección personalizada para error 404 (opcional)
+/404.html       /404.html    404
+
+# Puedes añadir más redirecciones personalizadas aquí si más adelante creás otras páginas
