@@ -1,0 +1,97 @@
+/* ===========================
+   Banner de Cookies (card flotante, centrado)
+   =========================== */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 28px;                 /* ← separa del borde inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(600px, 92vw);      /* responsivo: máx 600px o 92% del ancho */
+  background: rgba(30, 30, 30, 0.95);
+  color: #fff;
+  padding: 18px 22px;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  z-index: 10000;
+  opacity: 1;
+  animation: cookie-fade-up 0.45s ease both;
+}
+
+.cookie-banner p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e8e8e8;
+}
+
+.cookie-banner a {
+  color: #4DA8FF;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+#accept-cookies,
+#reject-cookies {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: filter 0.2s ease, transform 0.02s ease;
+}
+
+#accept-cookies {
+  background: #4DA8FF;
+  color: #0c0c0c;
+}
+
+#reject-cookies {
+  background: #3a3a3a;
+  color: #f1f1f1;
+}
+
+#accept-cookies:hover,
+#reject-cookies:hover {
+  filter: brightness(1.08);
+}
+
+#accept-cookies:active,
+#reject-cookies:active {
+  transform: translateY(1px);
+}
+
+/* Estado oculto controlado por JS */
+.cookie-banner.hidden {
+  display: none;
+}
+
+/* Animación de entrada */
+@keyframes cookie-fade-up {
+  from { opacity: 0; transform: translate(-50%, 16px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Responsive: un poco más de aire en pantallas chicas */
+@media (max-width: 480px) {
+  .cookie-banner {
+    bottom: 20px;
+    padding: 16px;
+    gap: 12px;
+  }
+  .cookie-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

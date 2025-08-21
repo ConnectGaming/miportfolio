@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacto con Zoutt - Editor de videos freelance. Envía tu mensaje y comencemos tu proyecto." />
+  <meta name="author" content="Zoutt Design" />
+
+  <!-- Fonts & Favicon -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/img/favicon.ico" />
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/contacto.css" />
+
+  <title>Contacto - Zoutt</title>
+</head>
+<body>
+
+  <!-- Menú principal -->
+  <nav class="main-nav">
+    <a href="home.html" class="logo" aria-label="Ir al inicio">
+      <img id="site-logo" src="assets/img/light_logo.png" alt="Zoutt logo">
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="home.html">Inicio</a></li>
+      <li><a href="reel.html">Reel</a></li>
+      <li><a href="trabajos.html">Trabajos</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner -->
+  <header id="banner">
+    <div class="animated-line"></div>
+  </header>
+
+  <!-- Main / Formulario de contacto -->
+  <main>
+    <section class="presentacion contacto">
+      <h1>Contacto</h1>
+      <p>Envíame un mensaje para proyectos freelance, consultas o colaboraciones.</p>
+
+      <form id="contact-form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <!-- Campo oculto para Netlify -->
+        <input type="hidden" name="form-name" value="contacto">
+
+        <!-- Honeypot anti-spam -->
+        <p class="hidden">
+          <label>Si eres humano, deja este campo vacío: <input name="bot-field"></label>
+        </p>
+
+        <!-- Campos del formulario -->
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy 2025 Zoutt video editor. Todos los derechos reservados</p>
+    <nav>
+      <a href="privacidad.html">Política de privacidad</a> |
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

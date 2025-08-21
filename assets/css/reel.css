@@ -1,0 +1,41 @@
+/* Body como columna flex para que main llene todo el espacio */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #000;
+}
+
+/* Header y footer mantienen su altura natural */
+.main-nav,
+#banner,
+footer {
+  flex-shrink: 0;
+}
+
+/* Main ocupa todo el espacio restante */
+.reel-main {
+  flex: 1;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor del video */
+.reel-video-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: stretch; /* asegura que el video ocupe toda la altura */
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Video que llena todo el contenedor */
+.reel-video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  object-fit: cover; /* llena todo el contenedor sin dejar franjas */
+}

@@ -1,0 +1,87 @@
+/* Main centrado vertical y horizontal */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px); /* ajusta según altura del footer */
+  padding: 20px;
+}
+
+/* Tarjeta del formulario */
+.presentacion.contacto {
+  background-color: rgba(10, 10, 10, 0.85);
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Campos y botón (igual que antes) */
+.presentacion.contacto h1 {
+  font-size: 2.2rem;
+  color: #FF542B;
+  margin-bottom: 12px;
+}
+.presentacion.contacto p {
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+#contact-form label {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+#contact-form input,
+#contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  font-size: 0.95rem;
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #FF542B;
+}
+#contact-form button {
+  align-self: flex-start;
+  background: #FF542B;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+#contact-form button:hover {
+  background: #e04a1b;
+}
+
+/* Honeypot oculto */
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    min-height: calc(100vh - 120px); /* ajustar si footer cambia */
+    padding: 20px;
+  }
+  .presentacion.contacto {
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+}

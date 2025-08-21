@@ -29,6 +29,7 @@
 
   <!-- Estilos -->
   <link rel="stylesheet" href="assets/css/intro.css" />
+  <link rel="stylesheet" href="assets/css/cookies.css" /> <!-- 👈 estilos del banner -->
 </head>
 <body>
   <!-- Preloader -->
@@ -43,29 +44,48 @@
       Tu navegador no soporta el video HTML5.
     </video>
 
-    <!-- Capa oscura sobre el video -->
+    <!-- Capa oscura sobre el video (suavizada en CSS) -->
     <div class="overlay"></div>
 
-    <!-- Franja superior con imagen de fondo -->
+    <!-- Franja superior con imagen de fondo (banner2.jpg) -->
     <div class="black-banner">
       <h1>FREELANCE VIDEO EDITOR</h1>
       <a href="home.html" class="explore-btn" aria-label="Ir al sitio principal">Explorar</a>
     </div>
-
-    <!-- Franja negra inferior estilo cinematográfico -->
-    <div class="black-bottom-bar"></div>
   </section>
   
+  <!-- Banner de Cookies -->
+  <div id="cookie-banner" class="cookie-banner hidden">
+    <p>
+      Este sitio utiliza cookies para mejorar tu experiencia. 
+      <a href="privacidad.html">Leer más</a>
+    </p>
+    <button id="accept-cookies">Aceptar</button>
+  </div>
+  
   <!-- Pie de página estilo cinematográfico -->
-<footer class="site-footer">
-  <div class="divider"></div>
-  <p>© 2025 Zoutt video editor. Todos los derechos reservados</p>
-  <nav>
-    <a href="#">Política de privacidad</a> |
-    <a href="#">Contacto</a>
-  </nav>
-</footer>
-
+  <footer class="site-footer">
+    <div class="divider"></div>
+    <p>© 2025 Zoutt video editor. Todos los derechos reservados</p>
+    <nav>
+      <a href="privacidad.html">Política de privacidad</a> |
+      <a href="#">Contacto</a>
+    </nav>
+  </footer>
+  <!-- Banner de Cookies -->  
+<div id="cookie-banner" class="cookie-banner hidden">
+  <p>
+    Usamos cookies para mejorar tu experiencia. 
+    Podés aceptar o rechazarlas. 
+    <a href="privacidad.html">Leer más</a>.
+  </p>
+  <div class="cookie-buttons">
+    <button id="accept-cookies" aria-label="Aceptar cookies">Aceptar</button>
+    <button id="reject-cookies" aria-label="Rechazar cookies">Rechazar</button>
+  </div>
+</div>
+  <!-- Scripts end-->
   <script src="assets/js/intro.js"></script>
+  <script src="assets/js/cookies.js"></script>
 </body>
 </html>

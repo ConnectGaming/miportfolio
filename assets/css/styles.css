@@ -37,7 +37,7 @@ body {
 }
 
 .main-nav .logo {
-  display: none;
+  display: block;
 }
 
 .main-nav .nav-links {
@@ -48,12 +48,12 @@ body {
 
 .main-nav .nav-links li a {
   text-decoration: none;
-  color: #ccc;
+  color: #f5f5ff;
   transition: color 0.3s;
 }
 
 .main-nav .nav-links li a:hover {
-  color: #ffffff;
+  color: #FF542B;
 }
 
 /* OCULTAR BOTÓN DE TEMA */
@@ -116,7 +116,7 @@ body {
   left: 0;
   width: 100%;
   height: 120px;
-  background: url('../img/banner.jpg') no-repeat center center;
+  background-color: #000; /*url('../img/banner.jpg') no-repeat center center;*/
   background-size: cover;
   display: flex;
   align-items: flex-end;
@@ -126,11 +126,11 @@ body {
 
 .animated-line {
   width: 100%;
-  height: 4px;
+  height: 2px;
   background: linear-gradient(90deg, #ff0055, #00c3ff, #ffcc00, #ff0055);
   background-size: 600% 100%;
   animation: moveGradient 8s linear infinite;
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
 @keyframes moveGradient {
@@ -162,7 +162,7 @@ main {
 .presentacion h1 {
   font-size: 2.4rem;
   margin-bottom: 20px;
-  color: #ff0066;
+  color: #FF542B;
 }
 
 .presentacion span {
@@ -176,13 +176,14 @@ main {
 }
 
 .presentacion a {
-  color: #00bfff;
+  color: #FF542B;
   text-decoration: none;
+  font-weight: 700;
   transition: color 0.3s ease;
 }
 
 .presentacion a:hover {
-  color: #ff4081;
+  color: #f5f5ff;
   text-decoration: underline;
 }
 
@@ -253,3 +254,101 @@ footer nav a:hover {
     font-size: 0.9rem;
   }
 }
+
+/* === Cabecera y logo responsivo fluido === */
+.main-nav {
+  display: flex;
+  align-items: center;            /* Centra verticalmente */
+  justify-content: space-between; /* Logo izq, menú der */
+  padding: 0 2vw;                  /* Espaciado lateral fluido */
+  min-height: clamp(80px, 13vw, 140px); /* Altura mínima 80px, máxima 140px */
+  box-sizing: border-box;
+}
+
+.main-nav .logo {
+  display: block;
+  margin-right: auto;              /* Empuja menú a la derecha */
+}
+
+.main-nav .logo img {
+  display: block;
+  height: clamp(72px, 12vw, 122px); /* Mín: 72px | Fluido: 12vw | Máx: 122px */
+  width: auto;
+}
+
+/* Ajuste extra en móviles pequeños */
+@media (max-width: 480px) {
+  .main-nav {
+    padding: 0 12px;
+  }
+}
+/* === COOKIE BANNER === */
+#cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  background: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+#cookie-banner.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#cookie-banner p {
+  margin: 0;
+  text-align: center;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#accept-cookies,
+#reject-cookies {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+#accept-cookies {
+  background: #007bff;
+  color: #fff;
+}
+
+#accept-cookies:hover {
+  background: #0056b3;
+}
+
+#reject-cookies {
+  background: #e0e0e0;
+  color: #333;
+}
+
+#reject-cookies:hover {
+  background: #c7c7c7;
+}
+  }
+
+

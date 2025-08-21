@@ -43,3 +43,33 @@ const imgExt = '.jpg'; // Cambiá a '.webp' más adelante si convertís
 //     img.src = `assets/img/${name}${imgExt}`;
 //   });
 // });
+
+// === Logo dinámico según tema ===
+(function() {
+  function updateLogo() {
+    var logoImg = document.getElementById('site-logo');
+    if (!logoImg) return;
+    var isLight = document.body.classList.contains('light-mode'); // clase ya usada por el sitio
+    logoImg.src = isLight ? 'assets/img/dark_logo.png' : 'assets/img/light_logo.png';
+  }
+
+  // Inicializar cuando cargue el DOM
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateLogo);
+  } else {
+    updateLogo();
+  }
+
+  // Si existe el botón de tema, volver a calcular luego de togglear
+  var themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function() {
+      // Esperar al cambio de clase (si el toggler lo hace en el mismo tick)
+      setTimeout(updateLogo, 0);
+    });
+  }
+
+  // Observador opcional por si el tema cambia desde otro script
+  var obs = new MutationObserver(function() { updateLogo(); });
+  obs.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+})();
